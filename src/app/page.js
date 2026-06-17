@@ -2,7 +2,8 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaSpotify, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 export default function Home(){
   const router = useRouter();
   function irParaHome(){
@@ -232,9 +233,15 @@ export default function Home(){
     {/* COLUNA DA DIREITA: Redes Sociais */}
     <div className="flex flex-col items-start md:items-end gap-3">
       <span className="text-[#663c19] font-semibold">Nos siga nas redes sociais:</span>
-      <div className="flex flex-row gap-15 text-[#663c19]">
+      <div className="flex flex-row gap-10 text-[#663c19]">
         <Link href="https://instagram.com" target="_blank">
-        <FaInstagram size={30} color="#0077b5" /></Link>
+        <FaInstagram size={40} color="#663c19" /></Link>
+        <Link href="https://facebook.com" target="_blank">
+        <FaFacebook size={40} color="#663c19" /></Link>
+        <Link href="https://spotify.com" target="_blank">
+        <FaSpotify size={40} color="#663c19" /></Link>
+        <Link href="https://whatsapp.com" target="_blank">
+        <FaWhatsapp size={40} color="#663c19" /></Link>
       </div>
     </div>
 
