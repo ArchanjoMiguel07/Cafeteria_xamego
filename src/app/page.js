@@ -7,12 +7,14 @@ import { FaX } from "react-icons/fa6";
 export default function Home(){
   const router = useRouter();
   function irParaHome(){
-    alert("Você clicou no botão")
-    
+    console.log("Usuário clicou, preparando para redirecionar...");
+    // Encaminha para a página de menu
+    router.push('/');
   }
   function irParaMenu(){
-    alert("Você clicou no botão")
-    
+    console.log("Usuário clicou, preparando para redirecionar...");
+    // Encaminha para a página de menu
+    router.push('/menu');
   }
   function irParaPromocao(){
     alert("Você clicou no botão")
