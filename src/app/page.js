@@ -62,14 +62,19 @@ export default function Home(){
           <button onClick={irParaSignUp} className=" bg-[#663c19] text-[#C0A279] px-6 py-2 rounded-2xl cursor-pointer hover:bg-[#C0A279] hover:text-[#663c19] duration-300">Sing Up</button>
         </div>
       </nav>
-      <div className="w-full h-[400px] relative overflow-hidden">
+      <div className="w-full h-[400px] relative overflow-hidden ">
         <Image 
         src="/banner-p.jpg" 
           alt="Café Espresso bem quente" 
           fill
           priority
-          className="object-cover"
+          className="object-cover "
         />
+        <div className="relative z-10 text-white p-25 ml-10 font-slab">
+        <h1 className="text-4xl font-slab text-[#c0a279]"> 
+          Um abraço em forma <br></br>de xícara</h1>
+          <p className="text-[#663c19]">Sinta o verdadeiro sabor do café</p>
+          </div>
       </div>
       <section className="w-full flex-col items-center py-16 px-6 text-center">
         <h1 className="text-[#663c19] text-5xl font-slab">
