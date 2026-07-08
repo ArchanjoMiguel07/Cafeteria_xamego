@@ -99,12 +99,13 @@ export default function Home(){
           alt="Café Espresso bem quente" 
           fill
           priority
-          className="object-cover "
+          className="object-cover scale-105"
         />
+        <div className="absolute inset-0 bg-black/30" /> 
         <div className="relative z-10 text-white p-6 md:p-25 md:ml-10 font-slab top-1/2 -translate-y-1/2">
-        <h1 className="text-3xl md:text-4xl font-slab text-[#c0a279]"> 
+        <h1 className="text-3xl md:text-4xl font-slab text-[#C0A279] mb-4"> 
           Um abraço em forma <br></br>de xícara</h1>
-          <p className="text-[#663c19] text-base md:text-lg">Sinta o verdadeiro sabor do café</p>
+          <p className="text-[#E1C397] text-base md:text-lg">Sinta o verdadeiro sabor do café!</p>
           </div>
       </div>
 
@@ -163,11 +164,11 @@ export default function Home(){
           {/* Bloco 1 */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
             <Image 
-            src="/bd-1.jpg" 
+            src="/pr-1.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
@@ -181,11 +182,11 @@ export default function Home(){
           {/* Bloco 2 */}
           <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
             <Image 
-            src="/bd-2.jpg" 
+            src="/pr-2.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
@@ -199,11 +200,11 @@ export default function Home(){
           {/* Bloco 3 */}
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
             <Image 
-            src="/bd-3.jpg" 
+            src="/pr-4.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>

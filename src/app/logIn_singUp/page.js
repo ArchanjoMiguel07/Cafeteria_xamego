@@ -43,20 +43,7 @@ export default function LoginPage() {
       console.error("Erro ao tentar fazer login:", err);
       setError("Senha ou usuário inválidos. Tente novamente mais tarde.");
     }
-    // --- Fim da Lógica de Autenticação com Backend ---
-
-    /*
-    // Sua lógica original (apenas para referência, será substituída pela lógica de backend)
-    const usuarioValido = "adm";
-    const senhaValida = "1234";
-
-    if (username === usuarioValido && password === senhaValida) { // Usando 'password' corrigido
-      console.log("Usuário válido! Carregando...");
-      router.push('/menu');
-    } else {
-      setError("Usuário ou senha incorretos! Tente novamente.");
-    }
-    */
+    
   };
 
   return (
