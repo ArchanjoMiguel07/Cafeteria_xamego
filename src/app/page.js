@@ -162,13 +162,13 @@ export default function Home(){
       <section className="py-10 md:py-16">
         <div className="flex flex-col items-center font-slab px-4">
           {/* Bloco 1 */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-20 md:mb-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-1.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
+            className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
@@ -180,13 +180,13 @@ export default function Home(){
           </div>
 
           {/* Bloco 2 */}
-          <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-20 md:mb-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-2.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
+            className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
@@ -198,13 +198,13 @@ export default function Home(){
           </div>
 
           {/* Bloco 3 */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-20 md:mb-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-4.jpg" 
             alt="Café Espresso bem quente" 
             height={250} // Adjusted for responsiveness
             width={250} // Adjusted for responsiveness
-            className="rounded-lg shadow-lg scale-150 mr-0 md:mr-4"
+            className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
               <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
