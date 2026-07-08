@@ -29,11 +29,13 @@ export default function Home(){
     
   }
   function irParaSignUp(){
-    alert("Você clicou no botão")
+    console.log("Usuário clicou, preparando para redirecionar...");
+    router.push('/logIn_singUp');
     
   }
   function irParaLogIn(){
-    alert("Você clicou no botão")
+    console.log("Usuário clicou, preparando para redirecionar...");
+    router.push('/logIn_singUp');
     
   }
   const patrocinioLista = Array(9).fill("Patrocínio");
