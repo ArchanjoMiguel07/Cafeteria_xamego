@@ -60,9 +60,9 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037]">
-      <div className="flex justify-center items-center h-[580px] w-[928px] rounded-[70px] mt-[20px] mb-[20px] bg-[#C0A279] shadow-[10px_10px_30px_#633c19] overflow-hidden"> 
-        <div className="flex flex-col justify-center items-center w-1/2 h-full text-[#633c19] font-dancing">
+    <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037] p-4">
+      <div className="flex flex-col md:flex-row justify-center items-center w-full md:max-w-4xl lg:max-w-5xl min-h-[580px] md:h-auto rounded-3xl md:rounded-[70px] my-8 bg-[#C0A279] shadow-[10px_10px_30px_#633c19] overflow-hidden"> 
+        <div className="flex flex-col justify-center items-center w-full md:w-1/2 h-full p-4 md:p-8 text-[#633c19] font-dancing">
           <img 
             src="/simbolo_xamego_x.png" 
             alt="Café com espuma" 
@@ -76,14 +76,14 @@ export default function LoginPage() {
             <input
               type="text"
               placeholder="Insira seu e-mail ou usuário"
-              className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+              className="w-full h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
               value={username} // Conecta o input ao estado
               onChange={(e) => setUsername(e.target.value)} // Atualiza o estado ao digitar
             />
             <input
               type="password" // Alterado para 'password' para ocultar a senha
               placeholder="Insira sua senha"
-              className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+              className="w-full h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
               value={password} // Conecta o input ao estado
               onChange={(e) => setPassword(e.target.value)} // Atualiza o estado ao digitar
             />
@@ -96,7 +96,7 @@ export default function LoginPage() {
             Não possui uma conta?! Vamos criar
           </Link>
         </div>
-        <div className="w-1/2 h-full">
+        <div className="hidden md:block w-full md:w-1/2 h-full">
           <img 
             src="/login.jpg" 
             alt="Dois cafés com espuma na mesa" 
