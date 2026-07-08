@@ -1,64 +1,108 @@
-"use client";
+"use client"
 import { useRouter } from "next/navigation";
 import { useState } from 'react';
-import Image from "next/image";
+import Image from "next/image"; // Mantido caso você queira usar o componente Image do Next.js
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaSpotify, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
-export default function Home(){
+// Importações de ícones removidas, pois não são usadas no código fornecido
+
+export default function LoginPage() {
   const router = useRouter();
   
-  const[email, setEmail]= useState('');
-  const[senha, setSenha]= useState('');
-  const[erro, setErro]= useState('');
+  const [username, setUsername] = useState(''); // Corrigido para 'username' para consistência
+  const [password, setPassword] = useState(''); // Corrigido para 'password' para consistência e segurança
+  const [error, setError] = useState(''); // Corrigido para 'error' para consistência
 
-  function lidarComLogin(event){
-    event.preventDefaut();
-    console.log("O usuário tentou entrar...")
+  const handleLogin = async (event) => {
+    event.preventDefault(); // Previne o recarregamento da página ao submeter o formulário
+    setError(''); // Limpa mensagens de erro anteriores
 
-    if (email=== '' || senha===''){
-      setErro('Por favor, preencha todos os campos!');
-      return;
+    // --- Lógica de Autenticação com Backend (Exemplo) ---
+    // Aqui é onde você faria a chamada para o seu backend para verificar as credenciais
+    try {
+      const response = await fetch('/api/login', { // Substitua '/api/login' pela sua rota de API
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Autenticação bem-sucedida
+        console.log("Login bem-sucedido!", data);
+        // Armazene o token de autenticação ou informações do usuário se necessário
+        // Ex: localStorage.setItem('token', data.token);
+        router.push('/menu'); // Redireciona para a página de menu
+      } else {
+        // Autenticação falhou
+        setError(data.message || "Usuário ou senha incorretos! Tente novamente.");
+      }
+    } catch (err) {
+      console.error("Erro ao tentar fazer login:", err);
+      setError("Senha ou usuário inválidos. Tente novamente mais tarde.");
     }
-      
-  }
-  return(
+    // --- Fim da Lógica de Autenticação com Backend ---
+
+    /*
+    // Sua lógica original (apenas para referência, será substituída pela lógica de backend)
+    const usuarioValido = "adm";
+    const senhaValida = "1234";
+
+    if (username === usuarioValido && password === senhaValida) { // Usando 'password' corrigido
+      console.log("Usuário válido! Carregando...");
+      router.push('/menu');
+    } else {
+      setError("Usuário ou senha incorretos! Tente novamente.");
+    }
+    */
+  };
+
+  return (
     <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037]">
       <div className="flex justify-center items-center h-[580px] w-[928px] rounded-[70px] mt-[20px] mb-[20px] bg-[#C0A279] shadow-[10px_10px_30px_#633c19] overflow-hidden"> 
         <div className="flex flex-col justify-center items-center w-1/2 h-full text-[#633c19] font-dancing">
-        <img 
-      src="/simbolo_xamego_x.png" 
-      alt="Café com espuma" 
-      className="w-[150px] h-[150px] inline-block align-middle object-contain"
-    />
-
-        <h2 className="mb-8 text-[30px]">Seja bem-vindo</h2>
-        <div className="w-full flex flex-col items-center gap-6 mb-6 text-[#C0A279]">
-          <input
-          type= "text"
-          placeholder="Insira seu e-mail ou usuário"
-          className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279]  rounded-2xl px-5 outline-none border-none"
+          <img 
+            src="/simbolo_xamego_x.png" 
+            alt="Café com espuma" 
+            className="w-[150px] h-[150px] inline-block align-middle object-contain"
           />
-          <input
-          type= "text"
-          placeholder="Insira sua senha"
-          className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none"
-          />
-          <button className="h-10 w-20 rounded-2xl text-[#C0A279] bg-[#633c19] hover:cursor-pointer hover:shadow-[0px_0px_20px_#633c19] duration-300">Entrar</button>
 
-        </div>
-        <p className="text-center mb-1">Para continuar você aceita nossos Termos e Política de privacidade</p>
-        <p className="font-dancing text-sm text-center cursor-pointer hover:underline hover:font-bold">
-        Não possui uma conta?! Vamos criar
-      </p>
+          <h2 className="mb-8 text-[30px]">Seja bem-vindo</h2>
+          
+          {/* Formulário para melhor semântica e tratamento de submissão */}
+          <form onSubmit={handleLogin} className="w-full flex flex-col items-center gap-6 mb-6 text-[#C0A279]">
+            <input
+              type="text"
+              placeholder="Insira seu e-mail ou usuário"
+              className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+              value={username} // Conecta o input ao estado
+              onChange={(e) => setUsername(e.target.value)} // Atualiza o estado ao digitar
+            />
+            <input
+              type="password" // Alterado para 'password' para ocultar a senha
+              placeholder="Insira sua senha"
+              className="w-100 h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+              value={password} // Conecta o input ao estado
+              onChange={(e) => setPassword(e.target.value)} // Atualiza o estado ao digitar
+            />
+            {error && <p className="text-red-500 text-sm">{error}</p>} {/* Exibe mensagem de erro */}
+            <button type="submit" className="h-10 w-20 rounded-2xl text-[#C0A279] bg-[#633c19] hover:cursor-pointer hover:shadow-[0px_0px_20px_#633c19] duration-300">Entrar</button>
+          </form>
+
+          <p className="text-center mb-1">Para continuar você aceita nossos Termos e Política de privacidade</p>
+          <Link href="/cadastro" className="font-dancing text-sm text-center cursor-pointer hover:underline hover:font-bold">
+            Não possui uma conta?! Vamos criar
+          </Link>
         </div>
         <div className="w-1/2 h-full">
-      <img 
-        src="/login.jpg" 
-        alt="Dois cafés com espuma na mesa" 
-        className="w-full h-full object-cover"
-      />
-    </div>
+          <img 
+            src="/login.jpg" 
+            alt="Dois cafés com espuma na mesa" 
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </main>
   );
