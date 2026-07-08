@@ -162,7 +162,7 @@ export default function Home(){
       <section className="py-10 md:py-16">
         <div className="flex flex-col items-center font-slab px-4">
           {/* Bloco 1 */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-1.jpg" 
             alt="Café Espresso bem quente" 
@@ -180,7 +180,7 @@ export default function Home(){
           </div>
 
           {/* Bloco 2 */}
-          <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-2.jpg" 
             alt="Café Espresso bem quente" 
@@ -198,7 +198,7 @@ export default function Home(){
           </div>
 
           {/* Bloco 3 */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 mt-10 md:mt-15 mb-10 md:mb-15 max-w-4xl">
             <Image 
             src="/pr-4.jpg" 
             alt="Café Espresso bem quente" 
