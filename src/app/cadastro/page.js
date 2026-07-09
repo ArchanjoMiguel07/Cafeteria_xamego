@@ -48,49 +48,42 @@ export default function LoginPage() {
 
   return (
     <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037] p-4">
-      <div className="flex flex-col md:flex-row justify-center items-center w-full md:max-w-4xl lg:max-w-5xl min-h-[580px] md:h-auto rounded-3xl md:rounded-[70px] my-8 bg-[#C0A279] shadow-[0px_0px_70px_#633c19] overflow-hidden"> 
+        <div className="flex flex-col md:flex-row justify-center items-center w-full md:max-w-4xl lg:max-w-5xl min-h-[580px] md:h-auto rounded-3xl md:rounded-[70px] my-8 bg-[#C0A279] shadow-[0px_0px_70px_#633c19] overflow-hidden">
         <div className="flex flex-col justify-center items-center w-full md:w-1/2 h-full p-4 md:p-8 text-[#633c19] font-slab">
-          <img 
+        <img 
             src="/simbolo_xamego_x.png" 
             alt="Café com espuma" 
             className="w-[150px] h-[150px] inline-block align-middle object-contain"
           />
+          <h2 className="mb-8 text-[22px]">Seja bem vindo A Xâmego! A Nº1 do DF.</h2>
 
-          <h2 className="mb-8 text-[30px]">Seja bem-vindo!</h2>
-          
-          {/* Formulário para melhor semântica e tratamento de submissão */}
-          <form onSubmit={handleLogin} className="w-full flex flex-col items-center gap-6 mb-6 text-[#C0A279]">
+          <form onClick={handleLogin} className="w-full flex flex-col items-center gap-6 mb-6 text-[#C0A279]">
             <input
-              type="text"
-              placeholder="Insira seu e-mail ou usuário"
-              className="w-full h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
-              value={username} // Conecta o input ao estado
-              onChange={(e) => setUsername(e.target.value)} // Atualiza o estado ao digitar
+            type="text"
+            placeholder="Insira seu nome"
+            className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
             />
             <input
-              type="password" // Alterado para 'password' para ocultar a senha
-              placeholder="Insira sua senha"
-              className="w-full h-10 bg-[#633c19] placeholder-[#C0A279] rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
-              value={password} // Conecta o input ao estado
-              onChange={(e) => setPassword(e.target.value)} // Atualiza o estado ao digitar
+            type="text"
+            placeholder="Insira seu e-mail"
+            className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
             />
-            {error && <p className="text-red-500 text-sm">{error}</p>} {/* Exibe mensagem de erro */}
-            <button type="submit" className="h-10 w-20 rounded-2xl text-[#C0A279] bg-[#633c19] hover:cursor-pointer hover:shadow-[0px_0px_20px_#633c19] duration-300">Entrar</button>
+            <input
+            type="text"
+            placeholder="Insira seu número de telefone"
+            className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+            />
+            <input
+            type="text"
+            placeholder="Insira sua senha"
+            className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
+            />
           </form>
-
-          <p className="text-center mb-1">Para continuar você aceita nossos Termos e Política de privacidade</p>
-          <Link href="/cadastro" className="font-slab text-sm text-center  cursor-pointer hover:underline hover:font-bold">
-            Não possui uma conta?! Vamos criar
-          </Link>
+          <button type="submit" className="h-12 w-25 bg-[#663c19] text-[#C0A279] rounded-2xl cursor-pointer hover:bg-[#C0A279] hover:text-[#633c19] duration-300">
+            Finalizar
+          </button>
         </div>
-        <div className="hidden md:block w-full md:w-1/2 h-full">
-          <img 
-            src="/login.jpg" 
-            alt="Dois cafés com espuma na mesa" 
-            className="w-full h-full object-cover"
-          />
         </div>
-      </div>
     </main>
   );
 }
