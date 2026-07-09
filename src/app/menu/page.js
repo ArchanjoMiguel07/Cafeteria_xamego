@@ -63,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex gap-10 mr-1 items-center font-dancing text-2xl">
+        <div className="hidden md:flex gap-10 mr-1 items-center font-slab text-2xl">
           <button onClick={irParaHome} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Home</button>
           <button onClick={irParaMenu} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Menu</button>
           <button onClick={irParaOndeEstamos} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Onde estamos?</button>
