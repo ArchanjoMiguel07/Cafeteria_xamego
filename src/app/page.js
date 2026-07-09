@@ -20,12 +20,9 @@ export default function Home(){
     router.push('/menu');
     setIsMenuOpen(false); // Close menu on navigation
   }
-  function irParaPromocao(){
-    alert("Você clicou no botão")
-    setIsMenuOpen(false); // Close menu on navigation
-  }
   function irParaOndeEstamos(){
-    alert("Você clicou no botão")
+    console.log("Usuário clicou, preparando para redirecionar...")
+    router.push('/localizacao');
     setIsMenuOpen(false); // Close menu on navigation
   }
   function irParaSobre(){
@@ -65,10 +62,9 @@ export default function Home(){
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex gap-10 mr-1 items-center font-dancing text-2xl">
+        <div className="hidden md:flex gap-10 mr-1 items-center font-slab text-2xl">
           <button onClick={irParaHome}  className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Home</button>
           <button onClick={irParaMenu} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Menu</button>
-          <button onClick={irParaPromocao} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Promoção</button>
           <button onClick={irParaOndeEstamos} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Onde estamos?</button>
           <button onClick={irParaSobre} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300">Sobre</button>
         </div>
@@ -82,7 +78,6 @@ export default function Home(){
           <div className="md:hidden absolute top-full left-0 w-full bg-[#C0A279] shadow-lg flex flex-col items-center py-4 z-20">
             <button onClick={irParaHome}  className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300 py-2">Home</button>
             <button onClick={irParaMenu} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300 py-2">Menu</button>
-            <button onClick={irParaPromocao} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300 py-2">Promoção</button>
             <button onClick={irParaOndeEstamos} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300 py-2">Onde estamos?</button>
             <button onClick={irParaSobre} className="text-[#663c19] cursor-pointer hover:text-[#7e6037] duration-300 py-2">Sobre</button>
             <div className="flex flex-col gap-4 mt-4">
