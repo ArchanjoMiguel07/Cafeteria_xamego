@@ -69,7 +69,7 @@ export default function LoginPage() {
             className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
             />
             <input
-            type="text"
+            type="number"
             placeholder="Insira seu número de telefone"
             className="placeholder-[#C0A279] w-full h-10 bg-[#9D7E57] rounded-2xl rounded-2xl px-5 outline-none border-none focus:bg-[#e1c397] focus:text-[#663c19]"
             />
