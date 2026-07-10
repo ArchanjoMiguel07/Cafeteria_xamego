@@ -166,10 +166,9 @@ export default function Home(){
             className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
-              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
+              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Aconchego em cada xícara</h2>
               <p className="text-base leading-relaxed text-[#9d7e57]">
-                O mundo do café é incrivelmente vasto, dividindo-se principalmente entre as espécies de grãos e as formas de preparo (as bebidas que encontramos nas cafeterias).
-                Como você está montando a interface da sua cafeteria, entender essas distinções ajuda bastante a estruturar o cardápio e os textos do seu site.
+                A Xamego faz jus ao nome! O nosso ambiente foi pensado para você se sentir em casa, como se um bom amigo estivesse passando o café na hora. É o lugar favorito dos nossos clientes para ler um livro, trabalhar ou saborear nossas delícias, como o famoso bolo de cenoura com calda de chocolate que tem gosto de abraço em dia de chuva.
               </p>
             </div>
           </div>
@@ -184,11 +183,10 @@ export default function Home(){
             className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
-              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
+              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Para quem ama café de verdade</h2>
               <p className="text-base leading-relaxed text-[#9d7e57]">
-                O mundo do café é incrivelmente vasto, dividindo-se principalmente entre as espécies de grãos e as formas de preparo (as bebidas que encontramos nas cafeterias).
-                Como você está montando a interface da sua cafeteria, entender essas distinções ajuda bastante a estruturar o cardápio e os textos do seu site.
-              </p>
+               Trabalhamos com grãos de altíssima qualidade e um cuidado rigoroso no preparo, do expresso perfeito ao cappuccino cremoso acompanhado de um croissant folhado e quentinho. Como diz o nosso cliente Ricardo Mendes: 'Dá para notar a paixão em cada detalhe'. Venha deixar sua pausa do dia muito mais saborosa.              
+               </p>
             </div>
           </div>
 
@@ -202,10 +200,9 @@ export default function Home(){
             className="rounded-lg shadow-lg scale-150 mr-0 mb-10 md:mb-15 md:mr-4"
             />
             <div className="flex flex-col max-w-md items-center md:items-start text-center md:text-left">
-              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Tipos de Café</h2>
+              <h2 className="text-[#663c19] text-3xl md:text-4xl mb-4">Sabor, praticidade e afeto</h2>
               <p className="text-base leading-relaxed text-[#9d7e57]">
-                O mundo do café é incrivelmente vasto, dividindo-se principalmente entre as espécies de grãos e as formas de preparo (as bebidas que encontramos nas cafeterias).
-                Como você está montando a interface da sua cafeteria, entender essas distinções ajuda bastante a estruturar o cardápio e os textos do seu site.
+                Sabemos que a rotina é corrida, por isso criamos o refúgio ideal para você recarregar as energias. Seja para um café rápido entre um compromisso e outro ou para saborear um combo completo de pão de queijo recheado e um latte bem desenhado. Preço justo, agilidade e aquela energia deliciosa que só a Xamego tem.
               </p>
             </div>
           </div>
@@ -225,23 +222,45 @@ export default function Home(){
       <div className="text-[#9d7e57] py-10 md:py-16 px-4 md:px-16 font-slab">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 md:divide-x divide-[#663c19]">
           <div className="flex flex-col items-center text-center px-4">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4 overflow-hidden">
+            <img 
+             src="mariaEduarda.png" 
+             alt="Maria Eduarda" 
+             className="w-full h-full object-cover" 
+               />
+            </div>
+
+            <h3 className="text-lg font-bold mb-2">Maria Eduarda, 21 anos – Designer UX/UI</h3>
             <p className="text-sm leading-relaxed text-justify">
-              Enticing new flavors and returning favorites are here so you can savor the season to the very last drop. Experience new Tropical Butterfly Refreshers, reunite with Horchata and more.
+              A Xamego faz jus ao nome! O ambiente é super aconchegante e o atendimento te faz sentir em casa, como se um amigo estivesse passando o café na hora. O bolo de cenoura com calda de chocolate deles é simplesmente divino e tem gosto de abraço em dia de chuva. É o meu lugar favorito para ler um livro ou trabalhar um pouco no notebook.
             </p>
           </div>
 
           <div className="flex flex-col items-center text-center px-4">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4 overflow-hidden">
+              <img 
+                src="carlosSilva.jpg" 
+                alt="Carlos Silva" 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            <h3 className="text-lg font-bold mb-2">Carlos Silva, 28 anos – Desenvolvedor Web</h3>
             <p className="text-sm leading-relaxed text-justify">
-              Enticing new flavors and returning favorites are here so you can savor the season to the very last drop. Experience new Tropical Butterfly Refreshers, reunite with Horchata and more.
+              Para quem realmente aprecia um bom café, a Xamego é parada obrigatória. Os grãos são de altíssima qualidade e dá para notar o cuidado no preparo, seja no expresso perfeito ou no filtrado na mesa. O pão de queijo recheado também é espetacular. Dá para ver que tudo ali é feito com critério e paixão.
             </p>
           </div>
 
           <div className="flex flex-col items-center text-center px-4">
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4" />
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex-shrink-0 mb-4 overflow-hidden">
+              <img 
+                src="anaPaula.jpg" 
+                alt="Ana Paula" 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            <h3 className="text-lg font-bold mb-2">Ana Paula, 25 anos – Fotógrafa</h3>
             <p className="text-sm leading-relaxed text-justify">
-              Enticing new flavors and returning favorites are here so you can savor the season to the very last drop. Experience new Tropical Butterfly Refreshers, reunite with Horchata and more.
+              O ambiente acolhedor e a qualidade dos produtos fazem da Xamego um lugar especial. Os bolos são incríveis e o café é preparado com muito cuidado. É o meu ponto de encontro favorito para tomar um bom café e conversar com amigos.
             </p>
           </div>
         </div>
