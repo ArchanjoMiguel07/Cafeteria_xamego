@@ -26,7 +26,8 @@ export default function Home(){
     setIsMenuOpen(false); // Close menu on navigation
   }
   function irParaSobre(){
-    alert("Você clicou no botão")
+    console.log("Usuário clicou, preparando para redirecionar...")
+    router.push('/sobre');
     setIsMenuOpen(false); // Close menu on navigation
   }
   function irParaSignUp(){

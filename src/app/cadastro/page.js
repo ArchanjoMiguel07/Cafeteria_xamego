@@ -47,8 +47,8 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037] p-4">
-        <div className="flex flex-col md:flex-row justify-center items-center w-full md:max-w-4xl lg:max-w-5xl min-h-[580px] md:h-auto rounded-3xl md:rounded-[70px] my-8 bg-[#C0A279] shadow-[0px_0px_70px_#633c19] overflow-hidden">
+    <main className="flex min-h-screen w-full flex-col justify-center items-center bg-[#7E6037] p-4 bg-[url('/fundo_cd.jpg')] bg-cover bg-center bg-no-repeat"> 
+        <div className="flex flex-col md:flex-row justify-center items-center w-full md:max-w-4xl lg:max-w-5xl min-h-[580px] md:h-auto rounded-3xl md:rounded-[70px] my-8 bg-[#C0A279] shadow-[0px_0px_20px_#633c19] overflow-hidden">
         <div className="flex flex-col justify-center items-center w-full md:w-1/2 h-full p-4 md:p-8 text-[#633c19] font-slab">
         <img 
             src="/simbolo_xamego_x.png" 
