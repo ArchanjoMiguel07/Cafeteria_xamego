@@ -88,7 +88,7 @@ export default function Home(){
           </div>
         )}
       </nav>
-      <section className="flex flex-col justify-center items-center font-slab  px-2 md:px-5 py-10 md:py-15">
+      <section className="flex flex-col justify-center items-center font-slab  px-10 md:px-20 py-10 md:py-15">
         <div className="text-[#633c19] text-[35px] mb-5 md:mb-10">
             <h1>
                 Onde encontrar o nosso Xâmego?
@@ -97,8 +97,19 @@ export default function Home(){
         <div className="text-[#9D7E57] text-[20px] mb-5 md:mb-10 mr-20">
             <p>Sabe aquele cheirinho de café passado que abraça a alma? Ele tem endereço fixo. A nossa casa está de portas abertas para ser o seu refúgio no meio da rotina, o ponto de encontro com os amigos ou o cenário perfeito para aquela pausa silenciosa que você merece. Venha nos visitar!</p>
         </div>
-        <div className="flex flex-col justify-center items-center md:flex-row text-[#9D7E57] text-[20px] mb-5 md:mb-10 mr-20">
-            <p>Sabe aquele cheirinho de café passado que abraça a alma? Ele tem endereço fixo. A nossa casa está de portas abertas para ser o seu refúgio no meio da rotina, o ponto de encontro com os amigos ou o cenário perfeito para aquela pausa silenciosa que você merece. Venha nos visitar!</p>
+        <div className="flex flex-col items-center md:flex-row text-[#9D7E57] text-[20px] mb-5 md:mb-10 mt-10 md:mt-20 gap-8 md:gap-20">
+            <p>Logradouro: [Rua / Avenida Exemplo, nº 123 – Bairro] <br />
+
+             Cidade / UF: [Cidade – Estado] | CEP: [00000-000] <br /> 
+             Ponto de referência: [Ex: Próximo ao Shopping X]
+            </p>
+            <Image
+            src="/mapa.jpg" 
+            alt="Café Espresso bem quente" 
+            height={250} // Adjusted for responsiveness
+            width={250} // Adjusted for responsiveness
+            className="rounded-lg shadow-lg md:mr-4 scale-150"
+            />
         </div>
 
       </section>
